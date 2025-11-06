@@ -7,7 +7,6 @@
 ## 1. Problem Statement
 The firm is scheduled to receive **€5,000,000** from a European customer in **90 days** as payment for exported goods. Our reporting currency is USD, exposing future cash flows to EUR/USD exchange rate volatility. Recent monetary policy divergence between the Federal Reserve and European Central Bank suggests elevated currency risk. If the euro depreciates prior to settlement, USD proceeds could materially decline, impacting revenue recognition and short-term liquidity. Our objective is to quantitatively compare alternative hedging strategies to lock in—or selectively protect—USD conversion value, and support a treasury recommendation prior to settlement :contentReference[oaicite:0]{index=0}.
 
----
 
 ## 2. Inputs (Known Variables)
 All variables below must be explicitly parameterized within the model:
@@ -27,7 +26,6 @@ All variables below must be explicitly parameterized within the model:
 
 Key model drivers will be input in a dedicated assumptions tab to simplify versioning and scenario runs.
 
----
 
 ## 3. Assumptions & Constraints
 - **Day Count Convention:** 30/360, simple interest basis for money market hedge.
@@ -42,7 +40,6 @@ Key model drivers will be input in a dedicated assumptions tab to simplify versi
 
 These constraints keep the mathematical flow transparent and realistically implementable.
 
----
 
 ## 4. Calculation Flow
 The spreadsheet will implement three hedging path flows plus an unhedged baseline:
@@ -55,7 +52,6 @@ The spreadsheet will implement three hedging path flows plus an unhedged baselin
 
 Purpose: benchmark risk and variance.
 
----
 
 ### (B) Forward Hedge
 1. Retrieve forward rate F(90-day).
@@ -66,7 +62,6 @@ Purpose: benchmark risk and variance.
 
 Eliminates FX uncertainty entirely.
 
----
 
 ### (C) Money Market Hedge
 1. Present-value discount the EUR receivable at r_EUR.
@@ -78,7 +73,6 @@ Eliminates FX uncertainty entirely.
 
 Creates synthetic forward via interest rate parity.
 
----
 
 ### (D) Options Hedge (EUR Put)
 1. Select strike price K based on market quotes.
@@ -91,7 +85,6 @@ Creates synthetic forward via interest rate parity.
 
 Provides downside protection with upside flexibility.
 
----
 
 ## 5. Outputs
 The model will generate:
@@ -118,7 +111,6 @@ The model will generate:
 
 Presentations should visually emphasize risk reduction vs. potential upside sacrifice.
 
----
 
 ## 6. Sensitivity Plan
 The spreadsheet will simulate outcomes across:
@@ -141,7 +133,6 @@ Visualization:
 
 Sensitivity tools allow treasury to stress-test adverse macro paths.
 
----
 
 ## 7. Limitations & Next Steps
 ### Limitations
@@ -164,4 +155,3 @@ Sensitivity tools allow treasury to stress-test adverse macro paths.
 
 This specification enables reproducible hedge evaluation and data-driven CFO decision-making.
 
----
